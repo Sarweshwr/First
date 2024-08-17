@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <style>
+        h1,h3{
+            color : white;
+        }
+        #b1,#b2,#b3,#b4,#b5{
+            background-color : black;
+            font-size : 30px;
+        }
+        #b{
+            background-color : black;
+        }
+        #a1,#a2,#a3{
+            background-color : black;
+            text-align : center;
+            color : white;
+        }
+        h3,h1{
+            color:white;
+            text-align : center;
+        }
+        #x{
+        display: inline-block;
+    }
+    button{
+        background-color : magenta;
+        color:white;
+    }
+    a : active{
+    color : white;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        
+    <div id="b">
+        <h1>LOGO</h1>
+        <h3><u>COMPANY NAME</u></h3>
+        <div id="x">
+        <button id="b1" style="color : white"><a href='/home' style="color : white"><b>HOME</b></a></button>
+        <button id="b2" style="color : white"><a href='/about' style="color : white"><b>ABOUT</b></a></button>
+        <button id="b3" style="color : white"><a href='/dashboard' style="color : white"><b>DASHBOARD</b></a></div>
+        <button id="b4" style="color : white"><a href='/login' style="color:white"><b>LOGIN</b></a></button>
+        <button id="b5" style="color : white"><a href='/signup' style="color:white"><b>SIGN UP</b></a></button>
+        </div>
+    </div>
+    </header>
+    
+    <div style =" background-color : red">
+    <h3 style="text-align : center">SIGN UP</h3></div>
+    <div>
+        <form method='POST' action="signup">
+        {%csrf_token%}
+            <b>enter name:</b>
+            <br>
+            <input name="name" type="text"><br>
+            enter email:</b>
+            <br>
+            <b><input name ="email" type"email"><br>
+            <b>enter password:<br></b>
+            <input name="password" type="password">
+            <p>
+                (atleast 8character with a capital and small letter with any symbol and number)
+            </p>
+            <br>
+            <b>enter confirm password:<br></b>
+            <input name="cnf_password" type="password"><br>
+            <p>
+                (atleast 8character with a capital and small letter with any symbol and number)
+            </p>
+            <button type="submit" name="submit">signup</button>
+        </form>
+    </div>
+    <br>
+    <p>already have an account??</p><br>
+    <button style="background-color : cyan"><a href="/login" style="color : white">LOGIN</a></button>
+    <br>
+
+    <footer>
+        <div style ="background-color : black">
+            <div id="a1">contact no.- 1234567890</div>
+            <div id ="a2">contact email- x@gmail.com</div>
+            <div id="a3">location</div>
+        </div>
+    </footer>
+</body>
+</html>    
