@@ -27,5 +27,4 @@ urlpatterns = [
     path('dashboard/' , dashboard),
     path('signup/', signup),
     path('login/',login),
-    path('home/',home),
 ]
