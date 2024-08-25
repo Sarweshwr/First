@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'home.html')
 def about(request):
     return render(request, 'about.html')
-#def signup(request):
+def signup(request):
     #return render(request, 'signup.html')
 def dashboard(request):
     return render(request, 'dashboard.html')
