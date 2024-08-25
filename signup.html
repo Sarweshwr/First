@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        li{
+            text-align:center
+        }
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.show {display:block;}
+    </style>
+    <script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+</head>
+<body>
+    <header>
+         <div>
+    <div id="company_logo" style="background-color:black"><img src="logo.jpg" style="border-radius:50%;width:90px;position:relative;top:10px;left:50px">
+    <h1 style="color:white; background-color:black">THE CODERS</h1>
+  <button onclick="myFunction()" class="dropbtn" style="position:relative;left:88%;bottom:30px;color:white; background-color:black">Profile</button>
+  <div id="myDropdown" class="dropdown-content" style="background-color:cyan;position:relative">
+    <li>Logout</li>
+    <li>settings</li>
+    <li>Account</li>
+  </div>
+</button>
+    </div>
+    </header>
+      <div style="display:inline-block;background-color:pink"}}>
+          <br><br><br><br><br><br><br><br>
+     <a href=""><h1>Login/Signup</h1></a>
+     <a href=""><h1>About_us</a><br></h1>
+     <a href=""><h1>Dashboard</a><br></h1>
+     <a href="home.html"><h1>Home</h1></a>
+    </div>
+    <div style="text-align:center; position:relative;left:10%; background-color:red;color:white;width:60%;border-radius:7%;display:inline-block">
+        <div style="background-color:magenta;margin-top:18px;padding:10px;display:flex;justify-content:space-around">
+            <a href="/signup" style="color:white"><h3>Signup</a></h3>
+            <a href="/login" style="color:white"><h3>Login</a></h3>
+            <a href="/account" style="color:white"><h3>account</a></h3>
+        </div>
+    <h1>Signup Page</h1><br/>
+    <form onsubmit="handleSignup()")>
+     <b>Enter Name:</b><br/>
+     <input id="name" type="text"/><br/>
+     <b>Enter Email:</b><br/>
+     <input id="email" type="email"/><br/>
+     <b>Enter Password:</b><br/>
+     <input id="password" type="password" /><br/>
+     <b>Enter confirm password:</b><br/>
+     <input id="cnf_password" type="password"><br/>
+     <input type="submit" style="border-radius:10%">
+    </form>
+    </div>
+    <footer>
+     <div style="background-color:black;position:relative;text-align:center;color:white"}}>
+     <b>contact.-1234</b><br/>
+     <b>email-xyz@gmail.com</b>
+    </div>
+    </footer>
+</body>
+<script>
+   function handleSignup(){
+    const name=document.getElementById("name").value;
+    const email=document.getElementById("name").value;
+    const password= document.getElementById("password").value;
+    const cnf_password=document.getElementById("cnf_password").value;
+    const val=[email,password];
+    if(password===cnf_password){
+   localStorage.setItem(name,val)
+   alert("logged in")
+    } else{
+      alert("password and cnf_password are not matched..")
+    }
+  }
+  </script>
+</html>
