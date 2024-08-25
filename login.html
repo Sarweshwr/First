@@ -28,20 +28,37 @@
         display: inline-block;
     }
     </style>
+    <script>
+        function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
 </head>
 <body>
+
     <header>
-        
-    <div id="b">
-        <h1>LOGO</h1>
-        <h3><u>COMPANY NAME</u></h3>
-        <div id="x">
-        <button id="b1" style="color : white"><a href='/home' style="color : white"><b>HOME</b></a></button>
-        <button id="b2" style="color : white"><a href='/about' style="color : white"><b>ABOUT</b></a></button>
-        <button id="b3" style="color : white"><a href='/dashboard' style="color : white"><b>DASHBOARD</b></a></div>
-        <button id="b4" style="color : white"><a href='/login' style="color:white"><b>LOGIN</b></a></button>
-        <button id="b5" style="color : white"><a href='/signup' style="color:white"><b>SIGN UP</b></a></button>
-        </div>
+         <div>
+    <div id="company_logo" style="background-color:black"><img src="logo.jpg" style="border-radius:50%;width:90px;position:relative;top:10px;left:50px">
+    <h1 style="color:white; background-color:black">THE CODERS</h1>
+  <button onclick="myFunction()" class="dropbtn" style="position:relative;left:88%;bottom:30px;color:white; background-color:black">Profile</button>
+  <div id="myDropdown" class="dropdown-content" style="background-color:cyan;position:relative">
+    <li>Logout</li>
+    <li>settings</li>
+    <li>Account</li>
+  </div>
+</button>
     </div>
     </header>
     
