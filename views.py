@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User , auth
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 def about(request):
     return render(request, 'about.html')
 def signup(request):
